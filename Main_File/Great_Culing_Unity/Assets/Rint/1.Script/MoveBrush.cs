@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveBrush : MonoBehaviour
 {
     Vector3 Move;
+    public GameObject buble;
     int Cnt = 1;
     void Update()
     {
@@ -27,7 +28,9 @@ public class MoveBrush : MonoBehaviour
                 Cnt++;
             }
         }
-
+        GameObject set = Instantiate(buble);
+        buble.transform.position = this.gameObject.transform.position;
+        Destroy(set, 0.5f);
         this.gameObject.transform.position += Move*Time.deltaTime;
     }
 }
