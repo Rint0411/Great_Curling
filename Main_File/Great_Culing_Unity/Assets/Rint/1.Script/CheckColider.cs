@@ -34,6 +34,13 @@ public class CheckColider : MonoBehaviour
             StartLine = true;
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.CompareTag("Stone"))
+        {
+            SoundMng.instance.PlaySe(5);
+        }
+    }
     private void OnTriggerStay(Collider other)
     {
         if(other.CompareTag("SafeArea"))

@@ -188,11 +188,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TitleSet
       objectReference: {fileID: 0}
-    - target: {fileID: 6064320404623574953, guid: 58220c04852961c4997620e398995caa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58220c04852961c4997620e398995caa, type: 3}
 --- !u!1 &1494766823
@@ -205,6 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1494766825}
   - component: {fileID: 1494766824}
+  - component: {fileID: 1494766826}
   m_Layer: 0
   m_Name: Sound
   m_TagString: Untagged
@@ -224,12 +220,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 407edccf59d103f4aaf9bc55da2a571a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectValue: 0
-  bgmValue: 0
+  effectValue: 1
+  bgmValue: 1
   bgmAudioSource: {fileID: 1739200844}
   SeAudioSource: {fileID: 1711053333}
-  BGMSoundSet: []
-  EffectSoundSet: []
+  BGMSoundSet:
+  - name: "\uD0C0\uC774\uD2C0 \uC74C\uC545"
+    clip: {fileID: 8300000, guid: 9f9d368c7f485e542b601407e1e2b3ad, type: 3}
+  - name: "\uB9F5\uC120\uD0DD / \uC0C1\uC810"
+    clip: {fileID: 8300000, guid: d89b57a399020f549ba279ebbc6f232e, type: 3}
+  - name: "\uACBD\uAE30\uC7A5"
+    clip: {fileID: 8300000, guid: 6435097a1a2fbe74883af5aae1e71a02, type: 3}
+  EffectSoundSet:
+  - name: "\uBC84\uD2BC"
+    clip: {fileID: 8300000, guid: cfb0eef069cc34049b755c9c3bcb4f1d, type: 3}
+  - name: "\uB9F5 \uB4F1\uC7A5"
+    clip: {fileID: 8300000, guid: c60ee7192abeacf43b98d08f7649ad0d, type: 3}
+  - name: None
+    clip: {fileID: 0}
+  - name: "\uB79C\uB364 \uC0AC\uC6B4\uB4DC"
+    clip: {fileID: 8300000, guid: c466ec18e5292e54bb1c1e6c923adf1b, type: 3}
+  - name: "\uB79C\uB364 \uB05D"
+    clip: {fileID: 8300000, guid: 3bf789adda91d5242aab00f721a03dd9, type: 3}
+  - name: "\uBD80\uB51B\uCE68"
+    clip: {fileID: 8300000, guid: b0bb66be556096d43b8395431cfe4170, type: 3}
 --- !u!4 &1494766825
 Transform:
   m_ObjectHideFlags: 0
@@ -246,6 +260,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &1494766826
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494766823}
+  m_Enabled: 1
 --- !u!1 &1711053331
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,10 +437,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.506
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

@@ -37,8 +37,9 @@ public class Random_Color : MonoBehaviour
         BlueScreen.SetActive(true);
          RedScreen.SetActive(false);
          }
-         count++;   
-         yield return new WaitForSeconds(0.4f);
+         count++;
+            SoundMng.instance.PlaySe(3);
+            yield return new WaitForSeconds(0.4f);
         }
         ColorRedBlue();
     }
@@ -65,6 +66,7 @@ public class Random_Color : MonoBehaviour
             BlueText.gameObject.SetActive(true);
             background.color = new Color32(120,120,255,255);
         }
+        SoundMng.instance.PlaySe(4);
         Invoke("Next", 1);
     }
     

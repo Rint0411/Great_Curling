@@ -17,8 +17,8 @@ public class SoundMng : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        bgmAudioSource.volume = PlayerPrefs.GetFloat("BGM");
-        SeAudioSource.volume = PlayerPrefs.GetFloat("SE");
+        //bgmAudioSource.volume = PlayerPrefs.GetFloat("BGM");
+        //SeAudioSource.volume = PlayerPrefs.GetFloat("SE");
     }
     public float effectValue, bgmValue;
     [SerializeField] private AudioSource bgmAudioSource, SeAudioSource;
@@ -36,7 +36,6 @@ public class SoundMng : MonoBehaviour
     {
         SeAudioSource.PlayOneShot(EffectSoundSet[count].clip);
     }
-
     private bool muteCheck = false;
 
     public void Mute()
@@ -65,6 +64,7 @@ public class SoundMng : MonoBehaviour
         SeAudioSource.PlayOneShot(EffectSoundSet[1].clip);
         PlayerPrefs.SetFloat("SE", sound);
     }
+
 }
 [System.Serializable]
 class BgmClip

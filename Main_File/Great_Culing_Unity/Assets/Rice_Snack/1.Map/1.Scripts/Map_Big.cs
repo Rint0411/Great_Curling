@@ -25,6 +25,7 @@ public class Map_Big : MonoBehaviour
     public void Big_Start()
     {
         canMove = true;
+        SoundMng.instance.PlaySe(1);
         Target = TargetOBJ.transform.position;
         popup.SetActive(true);
         transform.SetAsLastSibling();

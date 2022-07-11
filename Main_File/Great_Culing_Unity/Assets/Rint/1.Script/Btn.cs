@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Btn : MonoBehaviour
 {
     public bool Button,Shot,Check;
-    public GameObject Body,Canvas,Camera, Clean;
+    public GameObject Body,Canvas,Camera, Clean,sound;
     public Transform Ball,Line;
     public Rigidbody rid;
     public Vector2 Point;
@@ -24,6 +24,7 @@ public class Btn : MonoBehaviour
         transform.position = Point;
         ImageRectTransform.sizeDelta = new Vector2(0, 0);
         Canvas.SetActive(false);
+        sound.SetActive(true);
         Invoke("CameraSet",0.5f);
     }
     private void Start()
@@ -64,6 +65,7 @@ public class Btn : MonoBehaviour
         Clean.SetActive(true);
         VariableMng.VRBMNG.CameraSet.SetActive(!Check);
         VariableMng.VRBMNG.Turn += 1;
+
         Destroy(Canvas);
     }
 

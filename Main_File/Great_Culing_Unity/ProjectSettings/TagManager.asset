@@ -7,6 +7,7 @@ TagManager:
   - SafeArea
   - DeadLine
   - StartLine
+  - Stone
   layers:
   - Default
   - TransparentFX

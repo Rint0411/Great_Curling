@@ -20,7 +20,7 @@ public class SpeedUp : MonoBehaviour
     {
         if(DeadLine.StartLine == true){
             Left.SetActive(true);
-            LeftP = -0.0015f;
+            LeftP = -0.005f;
         }
     }
     public void RightUp()
@@ -32,7 +32,7 @@ public class SpeedUp : MonoBehaviour
     {
         if(DeadLine.StartLine == true){
             Right.SetActive(true);
-            RightP = 0.0015f;
+            RightP = 0.005f;
         }
     }
 
@@ -49,7 +49,7 @@ public class SpeedUp : MonoBehaviour
         if(RightP+LeftP!=0)
         {
             Kip = rid.velocity;
-            rid.velocity += new Vector3(Kip.z*(LeftP+RightP),0,Kip.z*0.001f);
+            rid.velocity += new Vector3(Kip.z*(LeftP+RightP),0,Kip.z*0.002f);
         }
     }
 }

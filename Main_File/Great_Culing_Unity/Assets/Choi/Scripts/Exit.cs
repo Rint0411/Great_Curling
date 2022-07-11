@@ -7,12 +7,7 @@ public class Exit : MonoBehaviour
 {
     public void OnClickExit()
     {
-        #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-        #else
-            Application.Quit();
-        #endif
-        
-        //Application.Quit();
+        Application.Quit();
+        SoundMng.instance.PlaySe(0);
     }
 }

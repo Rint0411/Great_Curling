@@ -6,7 +6,7 @@ public class Stone : MonoBehaviour
 {
     public Transform rid;
     Vector3 position;
-    public GameObject blue,red,ScoreB,Ending;
+    public GameObject blue,red,ScoreB,Ending,sound;
     
     bool o;
 
@@ -25,6 +25,7 @@ public class Stone : MonoBehaviour
     }
     void Stop()
     {
+        sound.SetActive(false);
         VariableMng.VRBMNG.CameraSet.SetActive(true);
         if(VariableMng.VRBMNG.Turn == 9||VariableMng.VRBMNG.Turn == 18|| VariableMng.VRBMNG.Turn == 27) 
         {

@@ -9,6 +9,11 @@ public class GameStart : MonoBehaviour
     public void OnClickStart()
     {
         GameObject GameStart = Instantiate(Gamestart);
+        SoundMng.instance.PlaySe(0);
         Destroy(Title);     
+    }
+    public void Start()
+    {
+        SoundMng.instance.PlayBgm(0);
     }
 }

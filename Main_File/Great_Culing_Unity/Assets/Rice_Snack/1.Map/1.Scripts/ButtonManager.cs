@@ -14,6 +14,7 @@ public class ButtonManager : MonoBehaviour
     {
         popup.SetActive(false);
         MapselectManager.instance.mapbig[(int)MapselectManager.instance.NowState].GetComponent<Map_Big>().Big_Stop();
+        SoundMng.instance.PlaySe(0);
     }
     public void start_game()
     {
@@ -21,6 +22,8 @@ public class ButtonManager : MonoBehaviour
         Instantiate(MapselectManager.instance.Maps[(int)MapselectManager.instance.NowState]);
         Maps.SetActive(false);
         Destroy(Main);
+        SoundMng.instance.PlayBgm(2);
+        SoundMng.instance.PlaySe(2);
     }
     public void select_AnGae()
     {
