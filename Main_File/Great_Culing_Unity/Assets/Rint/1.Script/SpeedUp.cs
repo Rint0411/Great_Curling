@@ -8,11 +8,13 @@ public class SpeedUp : MonoBehaviour
     public GameObject Right;
     public Rigidbody rid;
     public CheckColider DeadLine;
+    public MoveBrush Lscript,Rscript;
 
     Vector3 Kip;
     float LeftP,RightP;
     public void LeftUp()
     {
+        Lscript.check = true;
         Left.SetActive(false);
         LeftP = 0;
     }
@@ -25,6 +27,7 @@ public class SpeedUp : MonoBehaviour
     }
     public void RightUp()
     {
+        Rscript.check = true;
         Right.SetActive(false);
          RightP = 0;
     }
@@ -35,21 +38,29 @@ public class SpeedUp : MonoBehaviour
             RightP = 0.005f;
         }
     }
-
-    private void Update()
+    private void Start()
     {
-        
-        if(DeadLine.DeadLine == true)
+        StartCoroutine(s());
+    }
+    IEnumerator s()
+    {
+        while(true)
         {
-            Destroy(Right);
-            Destroy(Left);
-            Destroy(this.gameObject);
-        }
+            if (DeadLine.DeadLine == true)
+            {
+                Destroy(Right);
+                Destroy(Left);
+                Destroy(this.gameObject);
+            }
 
-        if(RightP+LeftP!=0)
-        {
-            Kip = rid.velocity;
-            rid.velocity += new Vector3(Kip.z*(LeftP+RightP),0,Kip.z*0.002f);
+            if (RightP + LeftP != 0)
+            {
+                Kip = rid.velocity;
+                rid.velocity += new Vector3(Kip.z * (LeftP + RightP), 0, Kip.z * 0.001f);
+            }
+
+            yield return new WaitForSeconds(0.05f);
         }
+        
     }
 }

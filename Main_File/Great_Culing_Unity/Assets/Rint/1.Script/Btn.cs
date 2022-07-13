@@ -6,11 +6,12 @@ public class Btn : MonoBehaviour
 {
     public bool Button,Shot,Check;
     public GameObject Body,Canvas,Camera, Clean,sound;
-    public Transform Ball,Line;
+    public Transform Ball,Line, PreventionPoint;
     public Rigidbody rid;
     public Vector2 Point;
     public float LineWidth, Power,PowerLimit;
     public RectTransform ImageRectTransform;
+    public int Prevention;
 
     public void Down()
     {
@@ -30,6 +31,7 @@ public class Btn : MonoBehaviour
     private void Start()
     {
         Point = Body.transform.position;
+        Prevention = Mathf.CeilToInt(PreventionPoint.transform.position.x) - Mathf.CeilToInt(Point.x);
     }
 
     private void Update()
@@ -38,14 +40,15 @@ public class Btn : MonoBehaviour
         {
             if(Button == true)
             {
-                float x = Mathf.Clamp(Input.mousePosition.x,-350+Point.x,350+Point.x);
-                float y = Mathf.Clamp(Input.mousePosition.y,0+Point.y,350+Point.y);
+                float x = Mathf.Clamp(Input.mousePosition.x,-Prevention + Point.x, Prevention + Point.x);
+                float y = Mathf.Clamp(Input.mousePosition.y,0+Point.y, Prevention + Point.y);
                 transform.position = new Vector2(x,y);
-                Power = (Mathf.Abs(transform.position.x-Point.x)+Mathf.Abs(transform.position.y-Point.y))/PowerLimit;
+                float LineSize = (Vector3.Distance(transform.position, Point) / Vector3.Distance(PreventionPoint.position, Point) * 100);
+                Power = LineSize  / PowerLimit;
                 
                 Vector3 differenceVector = transform.position - (Vector3)Point;
         
-                ImageRectTransform.sizeDelta = new Vector2(differenceVector.magnitude, LineWidth);
+                ImageRectTransform.sizeDelta = new Vector2(LineSize*5, LineWidth);
                 ImageRectTransform.pivot = new Vector2(0, 0.5f);
                 ImageRectTransform.position = Point;
                 float angle = Mathf.Atan2(differenceVector.y, differenceVector.x) * Mathf.Rad2Deg;
