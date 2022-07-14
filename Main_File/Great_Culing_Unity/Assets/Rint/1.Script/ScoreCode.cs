@@ -17,7 +17,8 @@ public class ScoreCode : MonoBehaviour
     }
     public void Next()
     {
-        for(int i =0; i<4; i++)
+        SoundMng.instance.PlaySe(0);
+        for (int i =0; i<4; i++)
         {
             VariableMng.VRBMNG.SetScoreRed[i] = 10;
             VariableMng.VRBMNG.SetScoreBlue[i] = 10;

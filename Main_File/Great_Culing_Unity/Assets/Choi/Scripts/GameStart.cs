@@ -8,6 +8,7 @@ public class GameStart : MonoBehaviour
     public GameObject Title;
     public void OnClickStart()
     {
+        Gamemanager.Gold = PlayerPrefs.GetInt("gold");
         GameObject GameStart = Instantiate(Gamestart);
         SoundMng.instance.PlaySe(0);
         Destroy(Title);     

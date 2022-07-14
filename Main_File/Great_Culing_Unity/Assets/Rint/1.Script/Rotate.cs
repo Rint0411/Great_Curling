@@ -9,6 +9,7 @@ public class Rotate : MonoBehaviour
     void Start()
     {
         Invoke("next", 2);
+        VariableMng.VRBMNG.check = false;
     }
 
     // Update is called once per frame

@@ -9,6 +9,7 @@ public class TurnBtn : MonoBehaviour
     // Start is called before the first frame update
     public void Click()
     {
+        SoundMng.instance.PlaySe(0);
         Destroy(this.gameObject);
         if(VariableMng.VRBMNG.RedandBlueTurn == true)
         {

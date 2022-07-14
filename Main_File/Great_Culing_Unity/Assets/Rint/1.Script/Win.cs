@@ -29,6 +29,7 @@ public class Win : MonoBehaviour
     }
     public void Next()
     {
+        SoundMng.instance.PlaySe(0);
         Instantiate(NextMap);
         Destroy(Map);Destroy(this.gameObject);
     }

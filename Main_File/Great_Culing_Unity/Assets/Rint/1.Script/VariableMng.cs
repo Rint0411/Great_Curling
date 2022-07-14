@@ -25,6 +25,7 @@ public class VariableMng : MonoBehaviour
 
     public bool RedandBlueTurn = true; // 파랑팀
     public int Turn = 1,Round,Red,Blue;
+    public bool check = false;
     //9 18 정산 무승부 시 3라운드 27정산 그 후 무승부 그냥 무승부로 처리
     //이긴 쪽이 정산 후 선공
     public bool Start = false;
