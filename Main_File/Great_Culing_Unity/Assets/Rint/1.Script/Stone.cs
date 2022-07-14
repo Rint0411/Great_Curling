@@ -18,7 +18,7 @@ public class Stone : MonoBehaviour
             {
                 VariableMng.VRBMNG.Start = false;
                 VariableMng.VRBMNG.RedandBlueTurn = !VariableMng.VRBMNG.RedandBlueTurn;
-                Invoke("Stop",0.1f);
+                Stop();
             }
             position = rid.position;
         }
