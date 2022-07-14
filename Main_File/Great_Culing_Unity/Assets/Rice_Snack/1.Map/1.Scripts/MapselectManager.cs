@@ -16,7 +16,7 @@ public class MapselectManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        SoundMng.instance.PlayBgm(1);
+        SoundMng.instance.PlayBgm(4);
     }
     public List<Sprite> images;
     [TextArea]

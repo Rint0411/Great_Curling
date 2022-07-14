@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class TurnBtn : MonoBehaviour
 {
-    public GameObject blue,red;
-
+    public GameObject blue,red,btn;
+    private void Start()
+    {
+        Invoke("Next", 0.5f);
+    }
+    void Next()
+    {
+        btn.SetActive(true);
+    }
     // Start is called before the first frame update
     public void Click()
     {

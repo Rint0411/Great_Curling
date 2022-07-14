@@ -6,12 +6,8 @@ using UnityEngine.UI;
 public class Win : MonoBehaviour
 {
     public Text t1,t2,main;
-    public GameObject Map,NextMap;
+    public GameObject NextMap;
 
-    private void Start()
-    {
-        Map = GameObject.Find("InGame_Bongyang(Clone)");
-    }
     void Update()
     {
         t1.text = VariableMng.VRBMNG.Blue+"";
@@ -30,7 +26,8 @@ public class Win : MonoBehaviour
     public void Next()
     {
         SoundMng.instance.PlaySe(0);
+        Gamemanager.Gold += 200;
         Instantiate(NextMap);
-        Destroy(Map);Destroy(this.gameObject);
+        VariableMng.VRBMNG.check = true; Destroy(this.gameObject);
     }
 }

@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 1494766825}
   - component: {fileID: 1494766824}
   - component: {fileID: 1494766826}
+  - component: {fileID: 1494766827}
   m_Layer: 0
   m_Name: Sound
   m_TagString: Untagged
@@ -236,6 +237,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: d89b57a399020f549ba279ebbc6f232e, type: 3}
   - name: "\uACBD\uAE30\uC7A5"
     clip: {fileID: 8300000, guid: 6435097a1a2fbe74883af5aae1e71a02, type: 3}
+  - name: "\uC0AC\uB9C9"
+    clip: {fileID: 8300000, guid: 5ffe23b092eae5943b09f9ab658dbdb3, type: 3}
+  - name: "\uC0C1\uC810"
+    clip: {fileID: 8300000, guid: 8ad3c181ab43363489f84fbac002fda3, type: 3}
   EffectSoundSet:
   - name: "\uBC84\uD2BC"
     clip: {fileID: 8300000, guid: cfb0eef069cc34049b755c9c3bcb4f1d, type: 3}
@@ -249,6 +254,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 3bf789adda91d5242aab00f721a03dd9, type: 3}
   - name: "\uBD80\uB51B\uCE68"
     clip: {fileID: 8300000, guid: b0bb66be556096d43b8395431cfe4170, type: 3}
+  - name: "\uB3CC\uC5D0 \uBD80\uB52A"
+    clip: {fileID: 8300000, guid: ccf9cbd73c7570d4c92a69f950151030, type: 3}
+  - name: "\uD3ED\uBC1C"
+    clip: {fileID: 8300000, guid: 91fa856eb9f7fb14f824a61909661849, type: 3}
 --- !u!4 &1494766825
 Transform:
   m_ObjectHideFlags: 0
@@ -273,6 +282,27 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494766823}
   m_Enabled: 1
+--- !u!114 &1494766827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494766823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a039a98d045ae4cb1a87a853b2e2de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlueStone:
+  - {fileID: 6873720326901125092, guid: 8431f24cd1387894084a8d898d2bf00d, type: 3}
+  - {fileID: 273928908462509315, guid: d8f1131694487c84380ab8ad5de4d79c, type: 3}
+  - {fileID: 288620451390736178, guid: 1aec4f90ebcf91442b0f7845f15a5416, type: 3}
+  RedStone:
+  - {fileID: 2045886625364065286, guid: e20e76440a8531b4c82baaa8a84e07a9, type: 3}
+  - {fileID: 7802314495021133592, guid: 1c9729987be93a54c95f187dd172d324, type: 3}
+  - {fileID: 5076893090426030804, guid: 1c599c926ef296c4f8db383607331bed, type: 3}
+  bgmCnt: 0
 --- !u!1 &1711053331
 GameObject:
   m_ObjectHideFlags: 0

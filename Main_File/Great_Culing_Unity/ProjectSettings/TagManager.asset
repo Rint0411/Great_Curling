@@ -8,6 +8,8 @@ TagManager:
   - DeadLine
   - StartLine
   - Stone
+  - link
+  - Rock
   layers:
   - Default
   - TransparentFX

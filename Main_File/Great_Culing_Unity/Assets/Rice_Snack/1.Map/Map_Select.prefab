@@ -476,11 +476,11 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 537842098850358759}
           m_MethodName: select_UiSeong
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 3
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -1549,10 +1549,11 @@ MonoBehaviour:
   - "\uC758\uC131\uC74D"
   expline:
   - "\uC548\uACC4\uBA74\uC774\uB2E4."
-  - "\uC548\uD3C9\uBA74\uC774\uB2E4."
+  - "\uBC14\uB78C\uC774 \uB9CE\uC774 \uBD80\uB294 \uC548\uD3C9\uBA74\uC774\uB2E4."
   - "\uC548\uC0AC\uBA74\uC774\uB2E4."
   - "\uBE44\uC548\uBA74\uC774\uB2E4."
-  - "\uBD09\uC591\uBA74\uC774\uB2E4."
+  - "\uACBD\uBD81\uC18C\uD504\uD2B8\uC6E8\uC5B4\uACE0 \uCEEC\uB9C1\uC7A5\uC774 \uC788\uB294
+    \uBD09\uC591\uBA74\uC774\uB2E4."
   - "\uCD98\uC0B0\uBA74\uC774\uB2E4."
   - "\uB2E4\uC778\uBA74\uC774\uB2E4."
   - "\uB2E8\uBD81\uBA74\uC774\uB2E4."
@@ -1565,7 +1566,8 @@ MonoBehaviour:
   - "\uC625\uC0B0\uBA74\uC774\uB2E4."
   - "\uC0AC\uACE1\uBA74\uC774\uB2E4."
   - "\uC2E0\uD3C9\uBA74\uC774\uB2E4."
-  - "\uC758\uC131\uC74D\uC774\uB2E4."
+  - "\uC0AC\uB9C9\uC744 \uBAA8\uBC29\uD558\uC5EC \uB9CC\uB4E0 \uCEEC\uB9C1\uC7A5\uC774
+    \uC788\uB294 \uC758\uC131\uC74D\uC774\uB2E4."
   _sprite: {fileID: 0}
   _name: 
   _expline: 
@@ -2578,6 +2580,7 @@ GameObject:
   - component: {fileID: 537842100398926210}
   - component: {fileID: 537842100398926223}
   - component: {fileID: 537842100398926208}
+  - component: {fileID: 370833224264113469}
   m_Layer: 0
   m_Name: AnPyeong
   m_TagString: Untagged
@@ -2689,6 +2692,45 @@ MonoBehaviour:
   size: 3
   speed: 10
   movespeed: 0.5
+--- !u!114 &370833224264113469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537842100398926214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 537842100398926208}
+          m_MethodName: Big_Start
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 537842100398926223}
+          m_MethodName: select_Anpyeong
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &537842100423662052
 GameObject:
   m_ObjectHideFlags: 0
@@ -3239,11 +3281,11 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 537842100535916085}
           m_MethodName: select_BongYang
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 2
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0

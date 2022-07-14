@@ -31,4 +31,5 @@ public class VariableMng : MonoBehaviour
     public bool Start = false;
     public GameObject CameraSet;
     public Transform Point;
+    public bool gpoint = false;
 }

@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class IsBuy_UI : MonoBehaviour
 {
-    [SerializeField] GameObject GameManager;
-    [SerializeField] GameObject ItemId;
+
+    [SerializeField] Item_Price ItemId;
     [SerializeField] GameObject BuyFrame;
     [SerializeField] Text text;
     void Update()
     {
-        if (GameManager.GetComponent<Gamemanager>().IsBuy[ItemId.GetComponent<Item_Price>().Item_Id])
+        if (Gamemanager.IsBuy[ItemId.Item_Id])
         {
             text.text = "구매됨";
             BuyFrame.SetActive(true);

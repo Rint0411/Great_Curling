@@ -22,7 +22,7 @@ public class SpeedUp : MonoBehaviour
     {
         if(DeadLine.StartLine == true){
             Left.SetActive(true);
-            LeftP = -0.005f;
+            LeftP = -0.01f;
         }
     }
     public void RightUp()
@@ -35,7 +35,7 @@ public class SpeedUp : MonoBehaviour
     {
         if(DeadLine.StartLine == true){
             Right.SetActive(true);
-            RightP = 0.005f;
+            RightP = 0.01f;
         }
     }
     private void Start()

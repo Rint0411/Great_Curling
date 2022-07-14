@@ -22,79 +22,84 @@ public class ButtonManager : MonoBehaviour
         Instantiate(MapselectManager.instance.Maps[(int)MapselectManager.instance.NowState]);
         Maps.SetActive(false);
         Destroy(Main);
-        SoundMng.instance.PlayBgm(2);
+        SoundMng.instance.PlayBgm(BallSet.inc.bgmCnt);
         SoundMng.instance.PlaySe(2);
     }
-    public void select_AnGae()
+    public void select_AnGae(int Cnt)
     {
         MapselectManager.instance.setMap(MapselectManager.MapState.AnGae);
+        BallSet.inc.bgmCnt = Cnt;
     }
-    public void select_Anpyeong()
+    public void select_Anpyeong(int Cnt)
     {
         MapselectManager.instance.setMap(MapselectManager.MapState.Anpyeong);
+        BallSet.inc.bgmCnt = Cnt;
     }
-    public void select_AnSa()
+    public void select_AnSa(int Cnt)
     {
-        MapselectManager.instance.setMap(MapselectManager.MapState.AnSa);
+        MapselectManager.instance.setMap(MapselectManager.MapState.AnSa); BallSet.inc.bgmCnt = Cnt;
     }
-    public void select_BiAn()
+    public void select_BiAn(int Cnt)
     {
-        MapselectManager.instance.setMap(MapselectManager.MapState.BiAn);
+        MapselectManager.instance.setMap(MapselectManager.MapState.BiAn); BallSet.inc.bgmCnt = Cnt;
     }
-    public void select_BongYang()
+    public void select_BongYang(int Cnt)
     {
-        MapselectManager.instance.setMap(MapselectManager.MapState.BongYang);
+        MapselectManager.instance.setMap(MapselectManager.MapState.BongYang); BallSet.inc.bgmCnt = Cnt;
     }
-    public void select_ChonSan()
+    public void select_ChonSan(int Cnt)
     {
-        MapselectManager.instance.setMap(MapselectManager.MapState.ChonSan);
+        MapselectManager.instance.setMap(MapselectManager.MapState.ChonSan); BallSet.inc.bgmCnt = Cnt;
     }
-    public void select_DaIn()
+    public void select_DaIn(int Cnt)
     {
-        MapselectManager.instance.setMap(MapselectManager.MapState.DaIn);
+        MapselectManager.instance.setMap(MapselectManager.MapState.DaIn); BallSet.inc.bgmCnt = Cnt;
     }
-    public void select_DanBuk()
+    public void select_DanBuk(int Cnt)
     {
-        MapselectManager.instance.setMap(MapselectManager.MapState.DanBuk);
+        MapselectManager.instance.setMap(MapselectManager.MapState.DanBuk); BallSet.inc.bgmCnt = Cnt;
     }
-    public void select_DanChon()
+    public void select_DanChon(int Cnt)
     {
+        BallSet.inc.bgmCnt = Cnt;
         MapselectManager.instance.setMap(MapselectManager.MapState.DanChon);
     }
-    public void select_DanMil()
+    public void select_DanMil(int Cnt)
     {
+        BallSet.inc.bgmCnt = Cnt;
         MapselectManager.instance.setMap(MapselectManager.MapState.DanMil);
     }
-    public void select_GaUm()
+    public void select_GaUm(int Cnt)
     {
-        MapselectManager.instance.setMap(MapselectManager.MapState.GaUm);
+        MapselectManager.instance.setMap(MapselectManager.MapState.GaUm); BallSet.inc.bgmCnt = Cnt;
     }
-    public void select_GeumSeong()
+    public void select_GeumSeong(int Cnt)
     {
-        MapselectManager.instance.setMap(MapselectManager.MapState.GeumSeong);
+        MapselectManager.instance.setMap(MapselectManager.MapState.GeumSeong); BallSet.inc.bgmCnt = Cnt;
     }
-    public void select_GuChan()
+    public void select_GuChan(int Cnt)
     {
-        MapselectManager.instance.setMap(MapselectManager.MapState.GuChan);
+        MapselectManager.instance.setMap(MapselectManager.MapState.GuChan); BallSet.inc.bgmCnt = Cnt;
     }
-    public void select_JeomGok()
+    public void select_JeomGok(int Cnt)
     {
-        MapselectManager.instance.setMap(MapselectManager.MapState.JeomGok);
+        MapselectManager.instance.setMap(MapselectManager.MapState.JeomGok); BallSet.inc.bgmCnt = Cnt;
     }
-    public void select_OkSan()
+    public void select_OkSan(int Cnt)
     {
-        MapselectManager.instance.setMap(MapselectManager.MapState.OkSan);
+        MapselectManager.instance.setMap(MapselectManager.MapState.OkSan); BallSet.inc.bgmCnt = Cnt;
     }
-    public void select_SaGak()
+    public void select_SaGak(int Cnt)
     {
-        MapselectManager.instance.setMap(MapselectManager.MapState.SaGak);
+        MapselectManager.instance.setMap(MapselectManager.MapState.SaGak); BallSet.inc.bgmCnt = Cnt;
     }
-    public void select_SinPyenog()
+    public void select_SinPyenog(int Cnt)
     {
-        MapselectManager.instance.setMap(MapselectManager.MapState.SinPyenog);
+        MapselectManager.instance.setMap(MapselectManager.MapState.SinPyenog); BallSet.inc.bgmCnt = Cnt;
     }
-    public void select_UiSeong()
+    public void select_UiSeong(int Cnt)
     {
-        MapselectManager.instance.setMap(MapselectManager.MapState.UiSeong);
+        MapselectManager.instance.setMap(MapselectManager.MapState.UiSeong); 
+        BallSet.inc.bgmCnt = Cnt;
     }
 }

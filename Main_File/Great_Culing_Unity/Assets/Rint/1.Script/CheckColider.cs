@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class CheckColider : MonoBehaviour
 {
+    
     public bool DeadLine,team,checking = false,LineCheck = false, StartLine;
+    bool g = false;
+    [Header("체크 시 블루")]
+    public GameObject gpoint;
 
     int round;
     private void Start()
@@ -13,6 +17,14 @@ public class CheckColider : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if(VariableMng.VRBMNG.gpoint == true && gpoint.activeSelf == false)
+        {
+            gpoint.SetActive(true);
+        }
+        else if(VariableMng.VRBMNG.gpoint == false && gpoint.activeSelf == true)
+        {
+            gpoint.SetActive(false);
+        }
         if(round != VariableMng.VRBMNG.Round)
         {
             Destroy(this.gameObject);
@@ -36,6 +48,15 @@ public class CheckColider : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.transform.CompareTag("Rock"))
+        {
+            SoundMng.instance.PlaySe(6);
+        }
+        if (g == false)
+        {
+            this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX| RigidbodyConstraints.FreezeRotationZ;
+            g = true;
+        }
         if (collision.transform.CompareTag("Stone"))
         {
             SoundMng.instance.PlaySe(5);

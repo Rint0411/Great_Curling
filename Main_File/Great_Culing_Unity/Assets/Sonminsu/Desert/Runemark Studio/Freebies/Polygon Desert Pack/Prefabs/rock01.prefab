@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3210907356726781051}
   m_Layer: 0
   m_Name: default
-  m_TagString: Untagged
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 431854}
   m_Layer: 0
   m_Name: rock01
-  m_TagString: Untagged
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
