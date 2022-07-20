@@ -1,1 +1,0 @@
-﻿using UnityEngine;public class Demo : MonoBehaviour{		void Start ()	{		QualitySettings.antiAliasing = 8;	}	void OnGUI ()	{		GUI.Box (new Rect (10, 10, 150, 25), "Heat Wave Demo");	}}
